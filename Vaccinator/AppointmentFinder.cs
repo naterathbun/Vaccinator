@@ -24,6 +24,9 @@ namespace Vaccinator
                     storeStatus = JsonConvert.DeserializeObject<StoreStatus>(response);
                     var hasAppointment = false;
 
+                    if (storeStatus.Data == null)
+                        break;
+
                     foreach (KeyValuePair<string, bool> entry in storeStatus.Data.slots)
                     {
                         if (entry.Value)
