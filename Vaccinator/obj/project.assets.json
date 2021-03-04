@@ -287,11 +287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Vaccinator\\Vaccinator\\Vaccinator\\Vaccinator.csproj",
+      "projectUniqueName": "E:\\Vaccinator\\Vaccinator\\Vaccinator.csproj",
       "projectName": "Vaccinator",
-      "projectPath": "E:\\Vaccinator\\Vaccinator\\Vaccinator\\Vaccinator.csproj",
+      "projectPath": "E:\\Vaccinator\\Vaccinator\\Vaccinator.csproj",
       "packagesPath": "C:\\Users\\nater\\.nuget\\packages\\",
-      "outputPath": "E:\\Vaccinator\\Vaccinator\\Vaccinator\\obj\\",
+      "outputPath": "E:\\Vaccinator\\Vaccinator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nater\\AppData\\Roaming\\NuGet\\NuGet.Config",
