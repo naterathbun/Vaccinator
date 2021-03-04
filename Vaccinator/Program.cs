@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Vaccinator
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            while(true)
+            while (true)
             {
                 Console.Clear();
+
                 Console.WriteLine("RiteAid Vaccine Appointment Search");
                 Console.WriteLine("Western Pennsylvania / Ohio Border ");
                 Console.WriteLine("Locations with Available Appointments");
@@ -17,9 +19,9 @@ namespace Vaccinator
                 var appointmentFinder = new AppointmentFinder();
                 appointmentFinder.FindAppointmentStatus();
 
-                Console.WriteLine("=====================================");
-                Console.WriteLine("\nPRESS ENTER TO REFRESH");
-                Console.ReadLine();
+                Console.WriteLine("\n=====================================");
+
+                await Task.Delay(TimeSpan.FromSeconds(30));
             }
         }
     }

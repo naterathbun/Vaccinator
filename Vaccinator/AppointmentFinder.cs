@@ -1,39 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using Newtonsoft.Json;
 
 namespace Vaccinator
 {
     public class AppointmentFinder
-    {        
+    {
         public void FindAppointmentStatus()
         {
-            var stores = GetStores();
+            var stores = GetStoresFromFile();
             var webRequestExecutor = new WebRequestExecutor();
 
             var availableStores = string.Empty;
 
             foreach (var store in stores)
             {
-                var url = CreateURL(store.StoreNumber);
+                var url = GetUrlFromStoreNumber(store.StoreNumber);
                 var response = webRequestExecutor.Get(url);
                 var storeStatus = new StoreStatus();
 
                 try
                 {
-                    storeStatus = JsonConvert.DeserializeObject<StoreStatus>(response);
                     var hasAppointment = false;
 
+                    storeStatus = JsonConvert.DeserializeObject<StoreStatus>(response);
                     if (storeStatus.Data == null)
                         break;
 
                     foreach (KeyValuePair<string, bool> entry in storeStatus.Data.slots)
-                    {
                         if (entry.Value)
                             hasAppointment = true;
-                    }
 
                     if (hasAppointment)
                         availableStores += "\nStore #" + store.StoreNumber + ": " + store.Address;
@@ -49,7 +46,7 @@ namespace Vaccinator
                 Console.WriteLine("\n(Currently no stores with available appointments)\n");
         }
 
-        private List<Store> GetStores()
+        private List<Store> GetStoresFromFile()
         {
             var stores = new List<Store>();
             var path = @"E:\Vaccinator\StoreList.csv";
@@ -72,7 +69,7 @@ namespace Vaccinator
             return stores;
         }
 
-        private string CreateURL(string storeNumber)
+        private string GetUrlFromStoreNumber(string storeNumber)
         {
             return "https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=" + storeNumber;
         }
