@@ -1,0 +1,15 @@
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.exe
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.deps.json
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.runtimeconfig.json
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.runtimeconfig.dev.json
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.dll
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Vaccinator.pdb
+E:\Vaccinator\Vaccinator\Vaccinator\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.csprojAssemblyReference.cache
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.AssemblyInfoInputs.cache
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.AssemblyInfo.cs
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.csproj.CoreCompileInputs.cache
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.csproj.CopyComplete
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.dll
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.pdb
+E:\Vaccinator\Vaccinator\Vaccinator\obj\Debug\netcoreapp3.1\Vaccinator.genruntimeconfig.cache
