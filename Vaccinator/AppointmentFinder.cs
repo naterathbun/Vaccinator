@@ -13,6 +13,8 @@ namespace Vaccinator
             var stores = GetStores();
             var webRequestExecutor = new WebRequestExecutor();
 
+            var availableStores = string.Empty;
+
             foreach (var store in stores)
             {
                 var url = CreateURL(store.StoreNumber);
@@ -34,12 +36,17 @@ namespace Vaccinator
                     }
 
                     if (hasAppointment)
-                        Console.Write("\nStore #" + store.StoreNumber + ": " + store.Address);
+                        availableStores += "\nStore #" + store.StoreNumber + ": " + store.Address;
                 }
                 catch (Exception)
                 {
                 }
             }
+
+            if (!string.IsNullOrEmpty(availableStores))
+                Console.WriteLine(availableStores);
+            else
+                Console.WriteLine("\n(Currently no stores with available appointments)\n");
         }
 
         private List<Store> GetStores()
