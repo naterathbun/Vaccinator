@@ -8,6 +8,7 @@ namespace Vaccinator
     public class AppointmentFinder
     {
         public readonly string StoreListFilePath = @"E:\Vaccinator\StoreList.csv";
+        public readonly string UrlBase = @"https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=";
 
         public void FindAppointmentStatus()
         {
@@ -17,7 +18,7 @@ namespace Vaccinator
 
             foreach (var store in stores)
             {
-                var url = GetUrlFromStoreNumber(store.StoreNumber);
+                var url = UrlBase + store.StoreNumber;
                 var response = webRequestExecutor.Get(url);
                 var storeStatus = new StoreStatus();
 
@@ -67,11 +68,6 @@ namespace Vaccinator
             }
 
             return stores;
-        }
-
-        private string GetUrlFromStoreNumber(string storeNumber)
-        {
-            return "https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=" + storeNumber;
         }
     }
 }
