@@ -7,11 +7,12 @@ namespace Vaccinator
 {
     public class AppointmentFinder
     {
+        public readonly string StoreListFilePath = @"E:\Vaccinator\StoreList.csv";
+
         public void FindAppointmentStatus()
         {
             var stores = GetStoresFromFile();
             var webRequestExecutor = new WebRequestExecutor();
-
             var availableStores = string.Empty;
 
             foreach (var store in stores)
@@ -49,9 +50,8 @@ namespace Vaccinator
         private List<Store> GetStoresFromFile()
         {
             var stores = new List<Store>();
-            var path = @"E:\Vaccinator\StoreList.csv";
-
-            using (var reader = new StreamReader(path))
+            
+            using (var reader = new StreamReader(StoreListFilePath))
             {
                 while (!reader.EndOfStream)
                 {

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 namespace Vaccinator
 {
     class Program
-    {
+    {        
         static async Task Main(string[] args)
         {
             while (true)
