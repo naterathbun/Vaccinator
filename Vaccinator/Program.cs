@@ -11,8 +11,7 @@ namespace Vaccinator
             {
                 Console.Clear();
 
-                Console.WriteLine("RiteAid Vaccine Appointment Search");
-                Console.WriteLine("Western Pennsylvania / Ohio Border ");
+                Console.WriteLine("RiteAid Vaccine Appointment Search");                
                 Console.WriteLine("Locations with Available Appointments");
                 Console.WriteLine("=====================================");
 
